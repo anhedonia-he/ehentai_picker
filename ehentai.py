@@ -19,13 +19,14 @@ class ehentai():
         return response
 
     def mkdir(self , path):
-        isExists = os.path.exists(os.path.join("/Users/Anhedonia/Desktop/workspace/myproject/ehentai_picker/", path))
+        front_pass = "/Users/Anhedonia/Desktop/workspace/myproject/ehentai_picker/"
+        isExists = os.path.exists(os.path.join(front_pass, path))
 
         if not isExists:
-            os.makedirs(os.path.join('/Users/Anhedonia/Desktop/workspace/myproject/ehentai_picker/',path))
-            os.chdir('/Users/Anhedonia/Desktop/workspace/myproject/ehentai_picker/'+path)
+            os.makedirs(os.path.join(front_pass,path))
+            os.chdir(front_pass+'/'+path)
         else:
-            os.chdir('/Users/Anhedonia/Desktop/workspace/myproject/ehentai_picker/'+path)
+            os.chdir(front_pass+'/'+path)
 
     def save(self , img_url , img):
         name = img_url[-7:-4]
