@@ -19,7 +19,7 @@ class ehentai():
         return response
 
     def mkdir(self , path):
-        front_pass = "/Users/Anhedonia/Desktop/workspace/myproject/ehentai_picker/"
+        front_pass = "/Users/Anhedonia/Desktop/存储/本子/"
         isExists = os.path.exists(os.path.join(front_pass, path))
 
         if not isExists:
