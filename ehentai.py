@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from bs4 import BeautifulSoup
 import requests
 import socket
@@ -36,7 +38,7 @@ class ehentai():
 
     def main(self , url):
         html = self.request(url)
-        print('requestget 完成')
+        print('requestget')
         img_soup_list = BeautifulSoup(html.text , 'lxml').find_all('div' , class_ = 'gdtm')
         path = BeautifulSoup(html.text , 'lxml').h1.string
         for img_html in img_soup_list:
@@ -48,4 +50,4 @@ class ehentai():
             self.save(img_url , img)
 
 ehentai_picker = ehentai()
-ehentai_picker.main('http://g.e-hentai.org/g/1008601/42b1fb2e82/')
+ehentai_picker.main('https://e-hentai.org/g/1025486/04b9cf0b96/')
